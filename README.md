@@ -6,16 +6,16 @@ Para executar os algoritmos, primeiro é necessário que você tenha instalado e
 o Node.js, dessa forma, basta executar o comando abaixo dentro da pasta do algoritmo que deseja
 ser executado:
 
-´´´bash
+```bash
 
 npm install
 
-´´´
+```
 
 Após, basta executar o seguinte comando para rodar o algoritmo no terminal:
 
-´´´bash
+```bash
 
 node main.js
 
-´´´
+```
