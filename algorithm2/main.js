@@ -5,15 +5,17 @@ const numExecucoes = 30;
 const temposTotais = new Array(8).fill(0).map(() => new Array(30).fill(0));
 
 function TestaPrimo(num) {
-  let ehPrimo = true;
-  let i = 2;
-  while (ehPrimo && i <= num / 2) {
-    if (num % i === 0) {
-      ehPrimo = false;
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+
+  if (num % 2 === 0 || num % 3 === 0) return false;
+
+  for (let i = 5; i * i <= num; i = i + 6) {
+    if (num % i == 0 || num % (i + 2) == 0) {
+      return false;
     }
-    i++;
   }
-  return ehPrimo;
+  return true;
 }
 
 function calcMedia(vetorTempo) {
